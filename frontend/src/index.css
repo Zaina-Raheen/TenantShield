@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-page text-ink font-sans antialiased; font-size: 14px; }
+  h1, h2 { @apply font-serif; }
+  :focus-visible { outline: 2px solid #176B65; outline-offset: 2px; }
+}
+@layer components {
+  .btn { @apply inline-flex items-center gap-2 rounded border border-line bg-white px-3 py-1.5 text-[13px] font-medium text-ink hover:bg-page disabled:opacity-50 disabled:cursor-not-allowed; }
+  .btn-primary { @apply border-accent bg-accent text-white hover:bg-[#145a55]; }
+  .btn-danger { @apply text-fail hover:bg-[#f8eeee]; }
+  .panel { @apply rounded-md border border-line bg-white; }
+  .th { @apply px-3 py-2 text-left text-[12px] font-medium text-muted border-b border-line whitespace-nowrap; }
+  .td { @apply px-3 py-2 border-b border-line align-top; }
+  .code { @apply font-mono text-[12.5px] break-words; }
+}
